@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&family=Raleway:wght@400;600;800;900&display=swap");
+:root {
+  --primary-color: #667AF3;
+}
+
+body {
+  background-color: #F2F2F2;
+  margin: 0;
+  font-family: 'Poppins';
+}
+
+.container {
+  background-color: #F2F2F2;
+  width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+header {
+  height: 80px;
+  font-size: 40px;
+  font-weight: 700;
+  margin-top: 5px;
+}
+
+header span {
+  color: var(--primary-color);
+}
+
+nav {
+  background-color: lightgray;
+  text-align: center;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+nav a {
+  color: var(--primary-color);
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  padding-left: 45px;
+  padding-right: 45px;
+}
+
+main {
+  text-align: center;
+}
+
+main .title {
+  padding-top: 25px;
+  color: gray;
+  font-size: 35px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+main .title span {
+  color: green;
+}
+
+main .actualizado {
+  margin-top: -10px;
+  color: gray;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+main .promedio {
+  padding-top: 30px;
+  color: black;
+  font-size: 35px;
+  font-weight: 700;
+}
+
+main .quote-box {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  background-color: lightgray;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+main .quote-box .quotes {
+  text-align: center;
+}
+
+footer {
+  background-color: yellowgreen;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 10px;
+  text-align: right;
+  padding-right: 5px;
+}
+/*# sourceMappingURL=style.css.map */
