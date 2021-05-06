@@ -13,7 +13,7 @@
     <header>
     Dólar<span>Perú</span>
     </header>
-
+    
     <nav>
         <a href="#">Fintechs</a>
         <a href="#">Bancos</a>
@@ -30,20 +30,27 @@
             Actualizado: {{ promedio_time }}
         </div>
         <div class="promedio">
-            Venta Promedio: {{ promedio }}
+            Promedio: {{ promedio }}
         </div>
 
         <div class="main-info">
-            <div class="quote-box">
-                <table class="quotes"
-                {% for row in latest %}
-                    <tr>    
-                        {% for item in row %}
-                            <td>{{ item }}</td>
-                        {%endfor%}
-                    </tr>
+            <div class="quote-box-left">
+                {% for image in images1 %}
+                    <p class="quotes-left">
+                        <img class="logos" src="{{ url_for('static', filename='images/'+image) }}">
+                        {{ quotes1[loop.index0] }}
+                    </p>
                 {%endfor%}
-            </table>
+            </div>
+            <div class="quote-box-right">
+                {% for image in images2 %}
+                    <p class="quotes-right">
+                        {{ quotes2[loop.index0] }}
+                        <img class="logos" src="{{ url_for('static', filename='images/'+image) }}">
+                        
+                        
+                    </p>
+                {%endfor%}
             </div>
         </div>
     </main>

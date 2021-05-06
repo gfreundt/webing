@@ -18,10 +18,10 @@ body {
 }
 
 header {
-    height: 80px;
     font-size: 40px;
     font-weight: 700;
     margin-top: 5px;
+    padding-top:10px;
 
     span {
         color: var(--primary-color);
@@ -33,6 +33,8 @@ nav {
     text-align: center;
     padding-top: 6px;
     padding-bottom: 6px;
+    border-radius: 25px;
+    
 
     a {
         color: var(--primary-color);
@@ -67,24 +69,64 @@ main {
     }
 
     .promedio {
-        padding-top: 30px;
-        color:black;
-        font-size:35px;
+        color: black;
+        background-color: rgb(196, 241, 245);
+        padding-top: 15px;
+        padding-bottom: 15px;
+        font-size:25px;
         font-weight: 700;
+        text-transform: uppercase;
     }
     
-    .quote-box {
-        padding-top: 20px;
-        padding-bottom: 20px;
-        text-align: center;
-        background-color: lightgray;
-        margin-left: auto;
-        margin-right: auto;
-        
-    
-        .quotes {
-            text-align: center;
+    .main-info {
+
+        background-color: rgb(223, 227, 231);
+  
+        .quote-box-left {
+            width: 480px;
+            padding-top: 10px;
+            padding-left: 20px;
+            padding-bottom: 10px;
+            text-align: left;
+            float:left;
+
+            .quotes-left {
+                height: 30px;
+                color:black;
+                font-size: 25px;
+                font-weight: bold;
+                line-height: 30px;
+                text-align: right;
+                padding-right: 20px;
+            }
         }
+
+        .quote-box-right {
+            margin-left: 502px;
+            width: 480px;
+            padding-top: 10px;
+            padding-right: 20px;
+            padding-bottom: 10px;
+            text-align: left;
+            
+            .quotes-right {
+                height: 30px;
+                color:black;
+                font-size: 25px;
+                font-weight: bold;
+                line-height: 30px;
+                text-align: left;
+                padding-left: 20px;
+            }
+        }
+        
+        .logos {
+            height: 30px;
+            padding-right: 30px;
+            padding-left: 30px;
+        }
+
+        
     }
 
 }
