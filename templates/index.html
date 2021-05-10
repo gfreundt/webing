@@ -32,7 +32,11 @@
         <div class="promedio">
             Promedio: {{ promedio }}
         </div>
-
+        <div class="graphs">
+            <img class="intraday" src="{{ url_for('static', filename='images/intraday.png') }}" alt="">
+            <img class="last-5-days" src="{{ url_for('static', filename='images/last5days.png') }}" alt="">
+            <img class="last-30-days" src="{{ url_for('static', filename='images/last30days.png') }}" alt="">
+        </div>
         <div class="main-info">
             <div class="quote-box-left">
                 {% for image in images1 %}

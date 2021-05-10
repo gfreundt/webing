@@ -70,14 +70,48 @@ main {
 
     .promedio {
         color: black;
-        background-color: rgb(196, 241, 245);
+        background-color: rgb(200, 247, 250);
         padding-top: 15px;
         padding-bottom: 15px;
         font-size:25px;
         font-weight: 700;
         text-transform: uppercase;
     }
+
+    .graphs {
+        background-color: rgb(218, 235, 236);
+        text-align: left;
+
+        .intraday {
+            padding-left: 25px;
+            padding-right: 20px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            height: 180px;
+            width: 280px;
+        }
+
+        .last-5-days {
+            padding-left: 25px;
+            padding-right: 20px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            height: 180px;
+            width: 280px;
+        }
+
+        .last-30-days {
+            padding-left: 25px;
+            padding-right: 10px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            height: 180px;
+        }
+
+    }
     
+    
+
     .main-info {
 
         background-color: rgb(223, 227, 231);
@@ -130,6 +164,7 @@ main {
     }
 
 }
+
 footer {
     background-color: yellowgreen;
     padding-top: 5px;
@@ -138,4 +173,5 @@ footer {
     text-align: right;
     padding-right: 5px ;
 }
+
 
