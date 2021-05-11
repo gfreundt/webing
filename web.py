@@ -6,7 +6,7 @@ import csv
 
 
 def find_path():
-    paths = [r'C:\Users\Gabriel Freundt\Google Drive\Multi-Sync\sharedData',r"D:\Google Drive Backup\Multi-Sync\sharedData", r"C:\users\gfreu\Google Drive\Multi-Sync\sharedData"]
+    paths = [r'C:\Users\Gabriel Freundt\Google Drive\Multi-Sync\sharedData',r"D:\Google Drive Backup\Multi-Sync\sharedData", r"C:\users\gfreu\Google Drive\Multi-Sync\sharedData", '/home/pi/webing']
     for path in paths:
         if os.path.exists(path):
             return path
