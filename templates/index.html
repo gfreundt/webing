@@ -33,15 +33,17 @@
             Promedio: {{ promedio }}
         </div>
         <div class="graphs">
-            <img class="intraday" src="{{ url_for('static', filename='images/intraday-venta.png') }}" alt="">
-            <img class="last-5-days" src="{{ url_for('static', filename='images/last5days-venta.png') }}" alt="">
-            <img class="last-30-days" src="{{ url_for('static', filename='images/last30days-venta.png') }}" alt="">
+            <img class="intraday" src="{{ url_for('static', filename='images/intraday-venta.png') }}">
+            <img class="last-5-days" src="{{ url_for('static', filename='images/last5days-venta.png') }}">
+            <img class="last-30-days" src="{{ url_for('static', filename='images/last30days-venta.png') }}">
         </div>
         <div class="main-info">
             <div class="quote-box-left">
                 {% for image in images1 %}
                     <p class="quotes-left">
-                        <img class="logos" src="{{ url_for('static', filename='images/'+image) }}">
+                        <a href = {{ urls1[loop.index0 ]}}>
+                            <img class="logos" src="{{ url_for('static', filename='images/'+image) }}">
+                        </a>
                         {{ quotes1[loop.index0] }}
                     </p>
                 {%endfor%}
@@ -50,9 +52,9 @@
                 {% for image in images2 %}
                     <p class="quotes-right">
                         {{ quotes2[loop.index0] }}
-                        <img class="logos" src="{{ url_for('static', filename='images/'+image) }}">
-                        
-                        
+                        <a href = {{ urls1[loop.index0 ]}}>
+                            <img class="logos" src="{{ url_for('static', filename='images/'+image) }}">
+                        </a>
                     </p>
                 {%endfor%}
             </div>
