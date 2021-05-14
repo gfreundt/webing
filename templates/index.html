@@ -41,7 +41,7 @@
             <div class="quote-box-left">
                 {% for image in images1 %}
                     <p class="quotes-left">
-                        <a href = {{ urls1[loop.index0 ]}}>
+                        <a href = {{ urls1[loop.index0 ]}} target="_blank">
                             <img class="logos" src="{{ url_for('static', filename='images/'+image) }}">
                         </a>
                         {{ quotes1[loop.index0] }}
@@ -52,7 +52,7 @@
                 {% for image in images2 %}
                     <p class="quotes-right">
                         {{ quotes2[loop.index0] }}
-                        <a href = {{ urls1[loop.index0 ]}}>
+                        <a href = {{ urls2[loop.index0 ]}} target="blank">
                             <img class="logos" src="{{ url_for('static', filename='images/'+image) }}">
                         </a>
                     </p>
