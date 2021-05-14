@@ -110,6 +110,7 @@ main .graphs .last-30-days {
 
 main .main-info {
   background-color: #dfe3e7;
+  text-decoration: none;
 }
 
 main .main-info .quote-box-left {
@@ -119,6 +120,7 @@ main .main-info .quote-box-left {
   padding-bottom: 10px;
   text-align: left;
   float: left;
+  text-decoration: none;
 }
 
 main .main-info .quote-box-left .quotes-left {
@@ -129,6 +131,10 @@ main .main-info .quote-box-left .quotes-left {
   line-height: 30px;
   text-align: right;
   padding-right: 20px;
+}
+
+main .main-info .quote-box-left .quotes-left a {
+  text-decoration: none;
 }
 
 main .main-info .quote-box-right {

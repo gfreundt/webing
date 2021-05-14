@@ -115,6 +115,7 @@ main {
     .main-info {
 
         background-color: rgb(223, 227, 231);
+        text-decoration: none;
   
         .quote-box-left {
             width: 480px;
@@ -123,6 +124,7 @@ main {
             padding-bottom: 10px;
             text-align: left;
             float:left;
+            text-decoration: none;
 
             .quotes-left {
                 height: 30px;
@@ -132,6 +134,10 @@ main {
                 line-height: 30px;
                 text-align: right;
                 padding-right: 20px;
+                
+                a {
+                    text-decoration: none;  
+                }
             }
         }
 

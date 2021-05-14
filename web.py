@@ -24,10 +24,9 @@ def index():
 		images, urls, quotes = [i[0] for i in latest], [i[1] for i in latest], [i[2] for i in latest]
 		images1, images2 = images[:len(images)//2], images[len(images)//2:]
 		quotes1, quotes2 = quotes[:len(quotes)//2], quotes[len(quotes)//2:]
+		urls1, urls2 = urls[:len(images)//2], urls[len(images)//2:]
 
-		print(images1,images2)
-		print(quotes1,quotes2)
-		return render_template('index.html', quotes1=quotes1, quotes2=quotes2, images1=images1, images2=images2, urls=urls, promedio=promedio, promedio_date=promedio_date, promedio_time=promedio_time)
+		return render_template('index.html', quotes1=quotes1, quotes2=quotes2, images1=images1, images2=images2, urls1=urls1, urls2=urls2, promedio=promedio, promedio_date=promedio_date, promedio_time=promedio_time)
 
 #return render_template("dashboard.html", date=date, time=time, data=data)
 
