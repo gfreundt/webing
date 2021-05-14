@@ -17,7 +17,7 @@ app = Flask(__name__)
 
 @app.route("/tdc")
 def index():
-	with open(os.path.join(DATA_PATH, 'TDC_fixed.txt'), mode='r') as file:
+	with open(os.path.join(DATA_PATH, 'WEB_Venta'), mode='r') as file:
 		data = [i for i in csv.reader(file, delimiter=',')]
 		promedio, promedio_time, promedio_date = data[0]
 		latest = data[1:]
