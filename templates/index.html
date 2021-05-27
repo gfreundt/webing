@@ -41,7 +41,7 @@
             <div class="quote-box-left">
                 {% for detail in details1 %}
                     <p class="quotes-left">
-                        <a href = {{ detail.url }} target="_blank">
+                        <a href = {{ detail.name }} target="_blank">
                             <img class="logos" src="{{ url_for('static', filename='images/'+detail.image) }}">
                         </a>
                         {{ detail.value }}
@@ -52,7 +52,7 @@
                 {% for detail in details2 %}
                     <p class="quotes-right">
                         {{ detail.value }}
-                        <a href = {{ detail.url }} target="blank">
+                        <a href = {{ detail.name }} target="blank">
                             <img class="logos" src="{{ url_for('static', filename='images/'+detail.image) }}">
                         </a>
                     </p>
