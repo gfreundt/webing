@@ -27,10 +27,10 @@
             Valor de Venta del <span>Dólar</span>
         </div>
         <div class="actualizado">
-            Actualizado: {{ promedio_time }}
+            Actualizado: {{ head.time }}
         </div>
         <div class="promedio">
-            Promedio: {{ promedio }}
+            Promedio: {{ head.value }}
         </div>
         <div class="graphs">
             <img class="intraday" src="{{ url_for('static', filename='images/intraday-venta.png') }}">
@@ -39,21 +39,21 @@
         </div>
         <div class="main-info">
             <div class="quote-box-left">
-                {% for image in images1 %}
+                {% for detail in details1 %}
                     <p class="quotes-left">
-                        <a href = {{ urls1[loop.index0 ]}} target="_blank">
-                            <img class="logos" src="{{ url_for('static', filename='images/'+image) }}">
+                        <a href = {{ detail.url }} target="_blank">
+                            <img class="logos" src="{{ url_for('static', filename='images/'+detail.image) }}">
                         </a>
-                        {{ quotes1[loop.index0] }}
+                        {{ detail.value }}
                     </p>
                 {%endfor%}
             </div>
             <div class="quote-box-right">
-                {% for image in images2 %}
+                {% for detail in details2 %}
                     <p class="quotes-right">
-                        {{ quotes2[loop.index0] }}
-                        <a href = {{ urls2[loop.index0 ]}} target="blank">
-                            <img class="logos" src="{{ url_for('static', filename='images/'+image) }}">
+                        {{ detail.value }}
+                        <a href = {{ detail.url }} target="blank">
+                            <img class="logos" src="{{ url_for('static', filename='images/'+detail.image) }}">
                         </a>
                     </p>
                 {%endfor%}

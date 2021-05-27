@@ -2,7 +2,7 @@ import os
 from flask import Flask, redirect, url_for, render_template, request
 import datetime as dt
 import time
-import csv
+import json
 
 
 def find_path():
@@ -11,25 +11,19 @@ def find_path():
         if os.path.exists(path):
             return path
 
-DATA_PATH = os.path.join(find_path(), 'data')
+DATA_PATH = os.path.join(find_path(), 'data', 'test')
 
 app = Flask(__name__)
 
 @app.route("/tdc")
 def index():
-	with open(os.path.join(DATA_PATH, 'WEB_Venta.txt'), mode='r') as file:
-		data = [i for i in csv.reader(file, delimiter=',')]
-		promedio, promedio_time, promedio_date = data[0]
-		latest = data[1:]
-		images, urls, quotes = [i[0] for i in latest], [i[1] for i in latest], [i[2] for i in latest]
-		images1, images2 = images[:len(images)//2], images[len(images)//2:]
-		quotes1, quotes2 = quotes[:len(quotes)//2], quotes[len(quotes)//2:]
-		urls1, urls2 = urls[:len(images)//2], urls[len(images)//2:]
-
-		return render_template('index.html', quotes1=quotes1, quotes2=quotes2, images1=images1, images2=images2, urls1=urls1, urls2=urls2, promedio=promedio, promedio_date=promedio_date, promedio_time=promedio_time)
-
-#return render_template("dashboard.html", date=date, time=time, data=data)
+	with open(os.path.join(DATA_PATH, 'WEB_Venta.json'), mode='r') as file:
+		data = json.load(file)
+		details = data['details']
+		details1, details2 = details[:len(details)//2], details[len(details)//2:]
+		return render_template('index.html', head=data['head'], details1=details1, details2=details2)
 
 if __name__ == "__main__":
-    app.run(debug=True, host="0.0.0.0")
+    #app.run(debug=True, host="0.0.0.0")
+    app.run(debug=True)
 
