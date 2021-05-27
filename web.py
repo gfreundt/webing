@@ -11,7 +11,7 @@ def find_path():
         if os.path.exists(path):
             return path
 
-DATA_PATH = os.path.join(find_path(), 'data', 'test')
+DATA_PATH = os.path.join(find_path(), 'data')
 
 app = Flask(__name__)
 
