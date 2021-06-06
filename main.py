@@ -1,13 +1,17 @@
-import os
+import os, platform
 from flask import Flask, redirect, url_for, render_template, request
 import json
 
 
 def find_path():
-    paths = [r'C:\Users\Gabriel Freundt\Google Drive\Multi-Sync\sharedData',r"D:\Google Drive Backup\Multi-Sync\sharedData", r"C:\users\gfreu\Google Drive\Multi-Sync\sharedData", '/home/pi/webing']
-    for path in paths:
-        if os.path.exists(path):
-            return path
+	computers = [{'name': 'GFT-Tablet', 'main_path': r'C:\users\gfreu\Google Drive\Multi-Sync\sharedData'},
+				 {'name': 'raspberrypi', 'main_path': r'/home/pi/webing'},
+				 {'name': 'POWER', 'main_path': r'C:\Users\Gabriel Freundt\Google Drive\Multi-Sync\sharedData'},
+				 {'name': 'cs-434515305264-default-boost-wnwhg', 'main_path': 'home/gfreundt/webapp/webing'}]
+	for computer in computers:
+		if platform.node() == computer['name']:
+			return computer['main_path']
+
 
 DATA_PATH = os.path.join(find_path(), 'data')
 
