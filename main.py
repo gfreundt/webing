@@ -7,10 +7,10 @@ def find_path():
 	computers = [{'name': 'GFT-Tablet', 'main_path': r'C:\users\gfreu\Google Drive\Multi-Sync\sharedData'},
 				 {'name': 'raspberrypi', 'main_path': r'/home/pi/webing'},
 				 {'name': 'POWER', 'main_path': r'C:\Users\Gabriel Freundt\Google Drive\Multi-Sync\sharedData'},
-				 {'name': 'cs-434515305264-default-boost-wnwhg', 'main_path': 'home/gfreundt/webapp/webing'}]
+				 {'name': '434515305264', 'main_path': 'home/gfreundt/webapp/webing'}]
 	for computer in computers:
 		print(computer)
-		if platform.node() == computer['name']:
+		if computer['name'] in platform.node():
 			print('selected')
 			return computer['main_path']
 
