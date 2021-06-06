@@ -9,7 +9,9 @@ def find_path():
 				 {'name': 'POWER', 'main_path': r'C:\Users\Gabriel Freundt\Google Drive\Multi-Sync\sharedData'},
 				 {'name': 'cs-434515305264-default-boost-wnwhg', 'main_path': 'home/gfreundt/webapp/webing'}]
 	for computer in computers:
+		print(computer)
 		if platform.node() == computer['name']:
+			print('selected')
 			return computer['main_path']
 
 
